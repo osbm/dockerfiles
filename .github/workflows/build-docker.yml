@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: [pyenv]
+        image: [pyenv, nix-example]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
