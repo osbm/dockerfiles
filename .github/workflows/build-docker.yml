@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        image: [pyenv, nix-example]
+        image: [pyenv, nix-example, nix]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,7 +18,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
-  
+
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
